@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width">
+  <link rel="Stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <title>Hamburger menu</title>
+</head>
+
+<body>
+
+<div class="hamburger" id="my-burger">
+	<div class="content">
+		<p>Put your ingredients here.</p>
+		<ul>
+			<li>Option 1</li>
+			<li>Option 2
+				<ul>
+					<li>Sub-option 1</li>
+					<li>Sub-option 2</li>
+					<li>Sub-option 3</li>
+				</ul>
+			</li>
+		</ul>		
+	</div>
+</div>
+
+<h1>Simple hamburger menu for generic applications</h1>
+
+<p>A bad menu is a bad menu. Sometimes however customers just want a menu without first going into tens of thousands of euros worth of strategy sessions.</p>
+
+<p>Also, by the time I get involved it is generally too late to change the IAD and I have to deliver a solution that is better than 'no solution'. A hamburger menu for mobile applications should suffice in those cases (the 'no solution' solution in those cases just being a long list of links at the top of the page that the mobile user will have to scroll past on every page.</p>
+
+<p>There is no design pattern for this. The name 'hamburger menu' creates the fallacious impression that we by definition are talking about a menu. As far as I am concerned however, site builders can put whatever they want on their hamburgers.</p>
+
+<p>Default: the 'no solution' solution.</p>
+
+<p>Mobile and Javascript? A part of the document gets hidden and replaced by the image of a hamburger.</p>
+
+<p>Desktop: the 'no solution' solution.</p>
+
+<p>For desktop you could choose to enforce the hamburger nevertheless.</p>
+
+<h2>Application</h2>
+
+<p>Step 1. Make sure from your web page is mobile ready (i.e. viewport is set and whatever).</p>
+
+<p>Step 2. Link the script containing the hamburger menu code.</p>
+
+<p>Step 3. Copy the sample styles to your style sheet and edit to taste.</p>
+
+<p>Step 4. Call hamburger() with the ID of the hamburger element.</p>
+
+<h2>Usage notes</h2>
+
+<h2>Todo</h2>
+
+<ul>
+	<li>Check accessibility</li>
+	<li>Name-space the hell out of this.</li>
+</ul>
+
+<script type="text/javascript">
+<!-- 
+	hamburger('my-burger');
+// -->
+</script>
+
+</body>
+</html>
