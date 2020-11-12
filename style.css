@@ -2,6 +2,7 @@
 /* These are the basic styles, the minimum you will need. */
 
 .hamburger > .content { display: none; }
+.hamburger > .icon { cursor: pointer; }
 .hamburger > .icon .icon-show { display: inline-block; }
 .hamburger > .icon .icon-hide { display: none; }
 
@@ -39,6 +40,7 @@ body {
 }
 
 .hamburger > .icon {
+	float: right;
 	width: 3em;
 	height: 3em;
 	background: url('sprite-hamburger-icons.svg');
@@ -49,7 +51,6 @@ body {
 
 .hamburger.show-menu > .icon {
 	background-position: 0% 123%; 
-	float: right;
 }
 
 .hamburger > .icon .label {
