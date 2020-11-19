@@ -1,24 +1,38 @@
 
-function hamburger(id) {
+function menuHamburger(id, localStrings) {
 	
-	var hBurger = document.getElementById(id);
+	var menuContainer = document.getElementById(id);
 	
-	// @todo Check we have an element.
+	if (null === menuContainer) {
+		return false;
+	}
+	
+	var defaultStrings = {'showmenu': 'Show menu', 'hidemenu': 'Hide menu'};
+	
+	if (undefined === localStrings) { localStrings = defaultStrings; }
+	else {
+		for (var s in defaultStrings) {
+			if (undefined === localStrings[s]) {
+				localStrings[s] = defaultStrings[s];
+			}
+		}
+	}
 	
 	// Build the icon.
 	var toggleIcon = document.createElement('div');
 	toggleIcon.setAttribute('class', 'icon');
-	toggleIcon.innerHTML = '<span class="icon-show"><span class="label">show menu</span></span><span class="icon-hide"><span class="label">hide menu</span></span>';
-	hBurger.insertBefore(toggleIcon, hBurger.childNodes[0]);
+	toggleIcon.innerHTML = '<span class="icon-show"><span class="label">' + localStrings['showmenu'] + '</span></span><span class="icon-hide"><span class="label">' + localStrings['hidemenu'] + '</span></span>';
+	menuContainer.insertBefore(toggleIcon, menuContainer.childNodes[0]);
 	
-	// Capture and process clicks.
+	// Capture and process clicks/taps.
 	toggleIcon.addEventListener('click', function(){
-		if ( hBurger.classList.contains( 'show-menu' ) ) {
-			hBurger.classList.remove( 'show-menu' );
+		if ( menuContainer.classList.contains( 'menu-hamburger-show' ) ) {
+			menuContainer.classList.remove( 'menu-hamburger-show' );
 		}
 		else {
-			hBurger.classList.add( 'show-menu' );
+			menuContainer.classList.add( 'menu-hamburger-show' );
 		}
 	});
 	
+	return true;
 }

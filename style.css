@@ -1,22 +1,22 @@
 
 /* These are the basic styles, the minimum you will need. */
 
-.hamburger > .content { display: none; }
-.hamburger > .icon { cursor: pointer; }
-.hamburger > .icon .icon-show { display: inline-block; }
-.hamburger > .icon .icon-hide { display: none; }
+.menu-hamburger > .content { display: none; }
+.menu-hamburger > .icon { cursor: pointer; }
+.menu-hamburger > .icon .icon-show { display: inline-block; }
+.menu-hamburger > .icon .icon-hide { display: none; }
 
-.hamburger.show-menu > .content { display: block; }
-.hamburger.show-menu > .icon .icon-show { display: none; }
-.hamburger.show-menu > .icon .icon-hide { display: inline-block; }
+.menu-hamburger.menu-hamburger-show > .content { display: block; }
+.menu-hamburger.menu-hamburger-show > .icon .icon-show { display: none; }
+.menu-hamburger.menu-hamburger-show > .icon .icon-hide { display: inline-block; }
 
 @media (min-width: 800px) {
 	/* 
 		- To force the hamburger menu on all displays, remove this media query and the rules it contains. 
 		- Don't forget to adapt the breakpoint to your own settings.
 	*/
-	.hamburger > .icon { display: none; }
-	.hamburger > .content { display: block; }
+	.menu-hamburger > .icon { display: none; }
+	.menu-hamburger > .content { display: block; }
 }
 
 /* These are the styles to make things look nice. You will want to replace these by your own design. */
@@ -26,7 +26,7 @@ body {
 	color: #000;
 }
 
-.hamburger {
+.menu-hamburger {
 	background: #fff;
 	margin: 1em;
 	border: 5px solid #000;
@@ -34,12 +34,12 @@ body {
 	padding: 0px;
 }
 
-.hamburger.show-menu {
+.menu-hamburger.menu-hamburger-show {
 	float: none;
 	padding: 1em;
 }
 
-.hamburger > .icon {
+.menu-hamburger > .icon {
 	float: right;
 	width: 3em;
 	height: 3em;
@@ -49,16 +49,16 @@ body {
 	background-position: 0% -33%; 
 }
 
-.hamburger.show-menu > .icon {
+.menu-hamburger.menu-hamburger-show > .icon {
 	background-position: 0% 123%; 
 }
 
-.hamburger > .icon .label {
+.menu-hamburger > .icon .label {
 	display: none;
 }
 
 @media (min-width: 800px) {
-	.hamburger {
+	.menu-hamburger {
 		background: transparent;
 		margin: 0;
 		border: 5px dashed #000;
@@ -66,12 +66,12 @@ body {
 		float: none; 
 	}
 
-	.hamburger .content > ul {
+	.menu-hamburger .content > ul {
 		list-type: none; 
 		display: block;
 	}
 
-	.hamburger .content > ul > li {
+	.menu-hamburger .content > ul > li {
 		display: inline-block;
 		vertical-align: top;
 		background: #fff;
@@ -81,3 +81,23 @@ body {
 	}
 }
 
+/* These are the styles for the Readme. */
+
+.sample-icon {
+	display: inline-block;
+	overflow: hidden;
+	width: 1em;
+	height: 1em;
+}
+
+.sample-icon img {
+	position: relative;
+	top: .3em;
+	width: 1em;
+	height: 1.5em;
+}
+
+.sample-icon img.sample-icon-close {
+	position: relative;
+	top: -.7em;
+}
