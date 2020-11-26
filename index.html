@@ -10,111 +10,124 @@
 
 <body>
 
-<div class="menu-hamburger" id="my-burger">
-	<div class="content">
-		<p>Put your ingredients here.
-		<ul>
-			<li>Option 1</li>
-			<li>Option 2
-				<ul>
-					<li>Sub-option 1</li>
-					<li>Sub-option 2</li>
-					<li>Sub-option 3</li>
-				</ul>
-			</li>
-		</ul>		
+<div id="masthead">
+
+	<!-- Start demo "menu". -->
+	<div class="menu-hamburger" id="my-burger">
+		<div class="content">
+			<p>This is a demo. Put your ingredients here. <a href="#main">Skip to documentation.</a>
+			<ul>
+				<li>Option 1</li>
+				<li>Option 2
+					<ul>
+						<li>Sub-option 1</li>
+						<li>Sub-option 2</li>
+						<li>Sub-option 3</li>
+					</ul>
+				</li>
+			</ul>		
+		</div>
 	</div>
+	<!-- End demo "menu". -->
+
 </div>
 
-<h1>Simple hamburger menu for generic applications</h1>
+<div id="main">
 
-<p><em>This page demonstrates the thing it describes by displaying a fake menu at the top.</em>
+	<h1>Simple hamburger menu for generic applications</h1>
 
-<p>I needed a simple hamburger menu for mobile websites.
+	<p><em>This page demonstrates the thing it describes by displaying a fake menu at the top.</em>
 
-<p>Here you will find that menu and the code needed to create it. HTML (this document), <a href="hamburger.js">Javascript</a> and <a href="hamburger.css">CSS</a>.
+	<p>I needed a simple hamburger menu for mobile websites.
 
-<p>There is no design pattern for what goes in the menu. The name 'hamburger menu' creates the fallacious impression that we are talking about a menu by definition. As far as I am concerned, however, site builders can put whatever they want on their hamburgers.
+	<p>Here you will find that menu and the code needed to create it. HTML (this document), <a href="hamburger.js">Javascript</a> and <a href="hamburger.css">CSS</a>.
 
-<p>Usage notes TL/DR: by default a menu gets shown, but if the screen is narrow and the user has Javascript, your menu will be replaced by the image of a hamburger. Click the hamburger to show the menu.
+	<p>There is no design pattern for what goes in the menu. The name 'hamburger menu' creates the fallacious impression that we are talking about a menu by definition. As far as I am concerned, however, site builders can put whatever they want on their hamburgers.
 
-<p>For desktop you could choose to enforce the hamburger nevertheless.
+	<p>Usage notes TL/DR: by default a menu gets shown, but if the screen is narrow and the user has Javascript, your menu will be replaced by the image of a hamburger. Click the hamburger to show the menu.
 
-<h2>Application</h2>
+	<p>For desktop you could choose to enforce the hamburger nevertheless.
 
-<p>Step 1. Make sure your web page is mobile ready (i.e. viewport is set and so on).
+	<h2>Application</h2>
 
-<p>Step 2. Add a menu, give it an id to your liking and a class 'menu-hamburger'.
+	<p>Step 1. Make sure your web page is mobile ready (i.e. viewport is set and so on).
 
-<p>Step 2. Link the script containing the hamburger menu code.
+	<p>Step 2. Add a menu, give it an ID to your liking and a class 'menu-hamburger'.
 
-<p>Step 3. Copy the sample styles to your style sheet and edit to taste.
+	<p>Step 2. Link the script containing the hamburger menu code.
 
-<p>Step 4. Call menuHamburger() with the ID of the hamburger element.
+	<p>Step 3. Copy the sample styles to your style sheet and edit to taste. (See the notes in the CSS about what to copy and what not.)
 
-<h2>Usage notes</h2>
+	<p>Step 4. Call menuHamburger() with the ID of the hamburger element.
 
-<p>@todo
+	<h2>Usage notes</h2>
 
-<h3>Set-up</h3>
+	<p>@todo
 
-<p>In a mobile-first set-up, you will have three states: 
+	<h3>Set-up</h3>
 
-<ol>
-	<li>Wide screen: menu is always displayed, all buttons will be hidden.
-	<li>Narrow screen: default is menu is hidden, menu only has class 'hamburger-menu', a hamburger button (<span class="sample-icon"><img src="sprite-hamburger-icons.svg" alt="[example]" class="sample-icon-burger" width="24" height="16"></span>) is shown.
-	<li>Narrow screen, hamburger was clicked: hamburger menu is being shown, menu has classes 'menu-hamburger' and 'menu-hamburger-show', the hamburger button has become a close button (<span class="sample-icon"><img src="sprite-hamburger-icons.svg" alt="[example]" class="sample-icon-close" width="24" height="16"></span>).
-</ol>
+	<p>In a mobile-first set-up, assuming Javascript is enabled, you will have three states: 
 
-<p>In this case, the default lay-out will be to hide the menu but show the icon. If the menu has a class 'menu-hamburger-show' or if the screen is wide, the menu will be shown. If the screen is narrow, a close icon will also be shown.
+	<ol>
+		<li>Wide screen: menu is always displayed, all buttons will be hidden.
+		<li>Narrow screen: default is menu is hidden, menu has both class 'hamburger-menu' and 'hamburger-menu-hidden', a Hamburger/Open button (<span class="sample-icon"><img src="sprite-hamburger-icons.svg" alt="[example]" class="sample-icon-burger" width="24" height="16"></span>) is shown.
+		<li>Narrow screen, hamburger was clicked: hamburger menu is being shown, menu only has class 'menu-hamburger', the hamburger button has become a Close button (<span class="sample-icon"><img src="sprite-hamburger-icons.svg" alt="[example]" class="sample-icon-close" width="24" height="16"></span>).
+	</ol>
 
-<p>Also if the visitor has a wide screen there is probably a lot more styling you will want to do to make use of the width of the screen. But I will leave that up to you.
+	<p>In this case, the default lay-out will be to hide the menu but show the icon. If the menu has a class 'menu-hamburger-show' or if the screen is wide, the menu will be shown. If the screen is narrow, a close icon will also be shown.
 
-<h3>Localisation</h3>
+	<p>Also if the visitor has a wide screen there is probably a lot more styling you will want to do to make use of the width of the screen. But I will leave that up to you.
 
-<p>You can pass an object containing strings as the second argument of the menuHamburger() function. 
+	<h3>Localisation</h3>
 
-<p>The value with key 'showmenu' contains your translation (or adaptation) of the string 'Show menu', whereas key 'hidemenu' represents your version of 'Hide menu'.
+	<p>You can pass an object containing strings as the second argument of the menuHamburger() function. 
 
-<p>I.e. <code>menuHamburger('my-id', {'showmenu': 'Open menu', 'hidemenu': 'Close menu'});</code>
+	<p>The value with key 'showmenu' contains your translation (or adaptation) of the string 'Show menu', whereas key 'hidemenu' represents your version of 'Hide menu'.
 
-<h3>Accessibility</h3>
+	<p>I.e. <code>menuHamburger('my-id', {'showmenu': 'Open menu', 'hidemenu': 'Close menu'});</code>
 
-<p>This should work, but let me know if it does not. You may wish to add the attribute 'aria-expanded' to the element with class 'menu-hamburger' and then use the Javascript to set the correct value ("true" or "false").
+	<h3>Accessibility</h3>
 
-<h3></h3>
+	<p>This should work, but let me know if it does not. You may wish to add the attribute 'aria-expanded' to the element with class 'menu-hamburger' and then use the Javascript to set the correct value ("true" or "false").
 
-<p>
+	<h3>Visual style</h3>
 
-<h2>Questions I have been asking myself</h2>
+	<p>Replace the sprite for the buttons with your own. The style sheet contains three sections; the first you must copy; the second you may copy (but likely you will want to change the definitions); the third you shouldn't copy.
 
-<p>Q: Aren't hamburger menus out?
+	<h3></h3>
 
-<p>A: Yes! No! Maybe? Thing is, customers unwilling to pay for intricate solutions keep coming up with intricate needs, so I had to come up with a known technology that can be used in the 'value pack'.
+	<p>
 
-<p>Q: Aren't there already a thousand hamburger menus out there?
+	<h2>Questions I have been asking myself</h2>
 
-<p>A: Probably. It takes far less time to roll my own than to evaluate a thousand existing solution. Also, in our attention economy the most popular existing solutions tend to be a little, shall we say, bloaty?
+	<p>Q: Aren't hamburger menus out?
 
-<p>Q: Fail! This is not CSS-only.
+	<p>A: Yes! No! Maybe? Thing is, customers unwilling to pay for intricate solutions keep coming up with intricate needs, so I had to come up with a known technology that can be used in the 'value pack'.
 
-<p>A: CSS-only menus are 90 % for bragging and only 10 % for usage in the real world. If you can make it work in only CSS, good for you!
+	<p>Q: Aren't there already a thousand hamburger menus out there?
 
-<h2>Todo</h2>
+	<p>A: Probably. It takes far less time to roll my own than to evaluate a thousand existing solutions. Also, in our attention economy the most popular existing solutions tend to be a little, shall we say, bloaty?
 
-<ul>
-	<li>Check accessibility - see also <a href="http://localhost/cgi-bin/wiki.pl?27_November_2019">here</a> for tips</li>
-	<li>Name-space the hell out of this.</li>
-	<li>Test in a real application.</li>
-</ul>
+	<p>Q: Fail! This is not CSS-only.
 
-<script type="text/javascript">
-<!-- 
-	menuHamburger('my-burger');
-// -->
-</script>
+	<p>A: CSS-only menus are 90 % for bragging rights and only 10 % for real world usage. If you can make it work in only CSS, good for you!
 
-<p>@todo When JS is disabled, the menu should be shown.
+	<h2>Todo</h2>
+
+	<ul>
+		<li>Name-space the hell out of this.</li>
+		<li>Test in a real application.</li>
+	</ul>
+
+	<script type="text/javascript">
+	<!-- 
+		menuHamburger('my-burger');
+	// -->
+	</script>
+
+	<p>@todo When JS is disabled, the menu should be shown.
+	
+</div> <!-- /#main -->
 
 </body>
 </html>

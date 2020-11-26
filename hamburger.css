@@ -86,6 +86,11 @@ body {
 
 /* These are the styles for the Readme. */
 
+#main {
+	margin: 0px auto;
+	max-width: 36em;
+}
+
 .sample-icon {
 	display: inline-block;
 	overflow: hidden;
