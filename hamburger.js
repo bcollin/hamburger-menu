@@ -12,8 +12,9 @@ function menuHamburger(id, localStrings) {
 	
 	var defaultStrings = {'showmenu': 'Show menu', 'hidemenu': 'Hide menu'};
 	
-	if (undefined === localStrings) { localStrings = defaultStrings; }
-	else {
+	if (undefined === localStrings) {
+		localStrings = defaultStrings; 
+	} else {
 		for (var s in defaultStrings) {
 			if (undefined === localStrings[s]) {
 				localStrings[s] = defaultStrings[s];
