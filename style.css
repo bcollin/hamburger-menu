@@ -1,14 +1,13 @@
 
 /* These are the basic styles, the minimum you will need. */
 
-.menu-hamburger > .content { display: none; }
 .menu-hamburger > .icon { cursor: pointer; }
-.menu-hamburger > .icon .icon-show { display: inline-block; }
-.menu-hamburger > .icon .icon-hide { display: none; }
+.menu-hamburger > .icon .icon-show { display: none; }
+.menu-hamburger > .icon .icon-hide { display: inline-block; }
 
-.menu-hamburger.menu-hamburger-show > .content { display: block; }
-.menu-hamburger.menu-hamburger-show > .icon .icon-show { display: none; }
-.menu-hamburger.menu-hamburger-show > .icon .icon-hide { display: inline-block; }
+.menu-hamburger.menu-hamburger-hidden > .content { display: none; }
+.menu-hamburger.menu-hamburger-hidden > .icon .icon-show { display: inline-block; }
+.menu-hamburger.menu-hamburger-hidden > .icon .icon-hide { display: none; }
 
 @media (min-width: 800px) {
 	/* 
@@ -16,10 +15,12 @@
 		- Don't forget to adapt the breakpoint to your own settings.
 	*/
 	.menu-hamburger > .icon { display: none; }
-	.menu-hamburger > .content { display: block; }
+	.menu-hamburger.menu-hamburger-hidden > .content { display: block; }
 }
 
-/* These are the styles to make things look nice. You will want to replace these by your own design. */
+
+/* These are the styles to make things look nice for the demo. 
+   You may want to replace these by your own design. */
 
 body {
 	background: #eee;
@@ -30,13 +31,13 @@ body {
 	background: #fff;
 	margin: 1em;
 	border: 5px solid #000;
-	float: right; 
-	padding: 0px;
-}
-
-.menu-hamburger.menu-hamburger-show {
 	float: none;
 	padding: 1em;
+}
+
+.menu-hamburger.menu-hamburger-hidden {
+	float: right; 
+	padding: 0px;
 }
 
 .menu-hamburger > .icon {
@@ -46,11 +47,11 @@ body {
 	background: url('sprite-hamburger-icons.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 0% -33%; 
+	background-position: 0% 123%; 
 }
 
-.menu-hamburger.menu-hamburger-show > .icon {
-	background-position: 0% 123%; 
+.menu-hamburger.menu-hamburger-hidden > .icon {
+	background-position: 0% -33%; 
 }
 
 .menu-hamburger > .icon .label {
@@ -58,7 +59,8 @@ body {
 }
 
 @media (min-width: 800px) {
-	.menu-hamburger {
+	.menu-hamburger,
+	.menu-hamburger.menu-hamburger-hidden {
 		background: transparent;
 		margin: 0;
 		border: 5px dashed #000;
@@ -80,6 +82,7 @@ body {
 		margin-right: 1em;
 	}
 }
+
 
 /* These are the styles for the Readme. */
 

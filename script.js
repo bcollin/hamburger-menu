@@ -7,6 +7,9 @@ function menuHamburger(id, localStrings) {
 		return false;
 	}
 	
+	menuContainer.classList.add( 'menu-hamburger-hidden' );
+
+	
 	var defaultStrings = {'showmenu': 'Show menu', 'hidemenu': 'Hide menu'};
 	
 	if (undefined === localStrings) { localStrings = defaultStrings; }
@@ -26,13 +29,13 @@ function menuHamburger(id, localStrings) {
 	
 	// Capture and process clicks/taps.
 	toggleIcon.addEventListener('click', function(){
-		if ( menuContainer.classList.contains( 'menu-hamburger-show' ) ) {
-			menuContainer.classList.remove( 'menu-hamburger-show' );
+		if ( menuContainer.classList.contains( 'menu-hamburger-hidden' ) ) {
+			menuContainer.classList.remove( 'menu-hamburger-hidden' );
 		}
 		else {
-			menuContainer.classList.add( 'menu-hamburger-show' );
+			menuContainer.classList.add( 'menu-hamburger-hidden' );
 		}
 	});
-	
+		
 	return true;
 }
