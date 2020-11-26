@@ -47,11 +47,11 @@ body {
 	background: url('sprite-hamburger-icons.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 0% 123%; 
+	background-position: 0% 130%; 
 }
 
 .menu-hamburger.menu-hamburger-hidden > .icon {
-	background-position: 0% -33%; 
+	background-position: 0% -32%; 
 }
 
 .menu-hamburger > .icon .label {
@@ -100,12 +100,12 @@ body {
 
 .sample-icon img {
 	position: relative;
-	top: .3em;
+	top: 0em;
 	width: 1em;
-	height: 1.5em;
+	height: 2em;
 }
 
 .sample-icon img.sample-icon-close {
 	position: relative;
-	top: -.7em;
+	top: -1em;
 }
