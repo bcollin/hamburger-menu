@@ -19,13 +19,8 @@
 }
 
 
-/* These are the styles to make things look nice for the demo. 
+/* These are the styles to make the menu look nice.
    You may want to replace these by your own design. */
-
-body {
-	background: #eee;
-	color: #000;
-}
 
 .menu-hamburger {
 	background: #fff;
@@ -85,6 +80,11 @@ body {
 
 
 /* These are the styles for the Readme. */
+
+body {
+	background: #eee;
+	color: #000;
+}
 
 #main {
 	margin: 0px auto;
