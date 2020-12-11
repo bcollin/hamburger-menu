@@ -1,5 +1,5 @@
 
-/* These are the basic styles, the minimum you will need. */
+/* 1. The basic styles, the minimum you will need. */
 
 .menu-hamburger > .icon { cursor: pointer; }
 .menu-hamburger > .icon .icon-show { display: none; }
@@ -10,16 +10,15 @@
 .menu-hamburger.menu-hamburger-hidden > .icon .icon-hide { display: none; }
 
 @media (min-width: 800px) {
-	/* 
-		- To force the hamburger menu on all displays, remove this media query and the rules it contains. 
-		- Don't forget to adapt the breakpoint to your own settings.
-	*/
+	/* - To force the hamburger menu on all displays, remove this 
+	     media query and the rules it contains. 
+	   - Don't forget to adapt the breakpoint to your own settings. */
 	.menu-hamburger > .icon { display: none; }
 	.menu-hamburger.menu-hamburger-hidden > .content { display: block; }
 }
 
 
-/* These are the styles to make the menu look nice.
+/* 2. The styles to make the menu look nice.
    You may want to replace these by your own design. */
 
 .menu-hamburger {
@@ -79,7 +78,7 @@
 }
 
 
-/* These are the styles for the Readme. */
+/* 3. The styles for the Readme. No need to copy these. */
 
 body {
 	background: #eee;
