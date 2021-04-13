@@ -14,19 +14,17 @@
 
 	<!-- Start demo "menu". -->
 	<div class="menu-hamburger" id="my-burger">
-		<div class="content">
-			<p>This is a demo. Put your ingredients here. <a href="#main">Skip to documentation.</a>
-			<ul>
-				<li>Option 1</li>
-				<li>Option 2
-					<ul>
-						<li>Sub-option 1</li>
-						<li>Sub-option 2</li>
-						<li>Sub-option 3</li>
-					</ul>
-				</li>
-			</ul>		
-		</div>
+		<p>This is a demo. Put your ingredients here. <a href="#main">Skip to documentation.</a>
+		<ul>
+			<li>Option 1</li>
+			<li>Option 2
+				<ul>
+					<li>Sub-option 1</li>
+					<li>Sub-option 2</li>
+					<li>Sub-option 3</li>
+				</ul>
+			</li>
+		</ul>
 	</div>
 	<!-- End demo "menu". -->
 
@@ -90,10 +88,6 @@
 
 	<p>Replace the sprite for the buttons with your own. The style sheet contains three sections; the first you must copy; the second you may copy (but likely you will want to change the definitions); the third you shouldn't copy.
 
-	<h3></h3>
-
-	<p>
-
 	<h2>Questions I have been asking myself</h2>
 
 	<p>Q: Aren't hamburger menus out?
@@ -107,10 +101,23 @@
 	<p>Q: Fail! This is not CSS-only.
 
 	<p>A: CSS-only menus are 90 % for bragging rights and only 10 % for real world usage. If you can make it work in only CSS, good for you!
+	
+	<h2>Widescreen demo</h2>
+	
+	<p>This second demo displays a hamburger menu that is always on, regardless of the screen width.</p>
+	
+	<div class="menu-hamburger" id="one-burger-is-no-burger">This is the demo.<br>&nbsp;</div>
+
+	<h2>Versions</h2>
+
+	<p>0.1 First release.
+	
+	<p>0.2 Fixed a bug where the CSS expects there to be a div with class="content". If you have been using this menu since v.0.1, you may need to rename or remove your div with class="content".
 
 	<script type="text/javascript">
 	<!-- 
 		menuHamburger('my-burger');
+		menuHamburger('one-burger-is-no-burger');
 	// -->
 	</script>
 	

@@ -108,3 +108,18 @@ body {
 	position: relative;
 	top: -1em;
 }
+
+/* Demo of a hamburger menu that is always on, regardless of the screen width. */
+#one-burger-is-no-burger.menu-hamburger-hidden {
+	width: 3em;
+}
+
+#one-burger-is-no-burger,
+#one-burger-is-no-burger .icon {
+	float: none;
+}
+
+@media (min-width: 800px) {
+	#one-burger-is-no-burger > .icon { display: block; }
+	#one-burger-is-no-burger.menu-hamburger-hidden > .content { display: none; }
+}

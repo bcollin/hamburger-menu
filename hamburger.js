@@ -21,6 +21,18 @@ function menuHamburger( id, localStrings ) {
 		}
 	}
 	
+	// Move the contents to a div called 'content'.
+	if (null === document.querySelector('#' + id + ' > .content')) {
+		var contentContainer = document.createElement('div');
+		contentContainer.setAttribute('class', 'content');
+		/* There is a nicer way using the ... operator to do this, but 
+			  not all browsers currently support the operator. */
+		while (menuContainer.childNodes.length) { 
+			contentContainer.appendChild(menuContainer.firstChild); 
+		}
+		menuContainer.prepend(contentContainer);
+	}
+	
 	// Build the icon.
 	var toggleIcon = document.createElement('div');
 	toggleIcon.setAttribute( 'class', 'icon' );
