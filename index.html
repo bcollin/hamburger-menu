@@ -106,18 +106,32 @@
 	
 	<p>This second demo displays a hamburger menu that is always on, regardless of the screen width.</p>
 	
-	<div class="menu-hamburger" id="one-burger-is-no-burger">This is the demo.<br>&nbsp;</div>
+	<div class="menu-hamburger" id="one-burger-is-no-burger">
+		<!-- The script will automatically wrap your contents 
+		in a div with class 'content', unless such a div 
+		already exists. This is a holdover from an older version. 
+		-->
+		<div class="content">
+			This is the demo.
+		</div>
+	</div>
 
 	<h2>Versions</h2>
 
 	<p>0.1 First release.
 	
 	<p>0.2 Fixed a bug where the CSS expects there to be a div with class="content". If you have been using this menu since v.0.1, you may need to rename or remove your div with class="content".
+	
+	<p>0.3 Turned the button into an actual HTML button, so it becomes tabbable. Replaced the sprite by images.
 
 	<script type="text/javascript">
 	<!-- 
 		menuHamburger('my-burger');
 		menuHamburger('one-burger-is-no-burger');
+		
+		// Alternatively:
+		// hbs = document.querySelectorAll('.menu-hamburger');
+		// for (var i=0; i<hbs.length; i++) { menuHamburgerObject(hbs.item(i)); }
 	// -->
 	</script>
 	

@@ -1,15 +1,18 @@
 
 function menuHamburger( id, localStrings ) {
-	
-	var menuContainer = document.getElementById( id );
+	const menuContainer = document.getElementById( id );
 	
 	if ( null === menuContainer ) {
 		return false;
 	}
-	
+
+	return menuHamburgerObject( menuContainer, localStrings );
+}
+
+function menuHamburgerObject( menuContainer, localStrings ) {
 	menuContainer.classList.add( 'menu-hamburger-hidden' );
 	
-	var defaultStrings = {'showmenu': 'Show menu', 'hidemenu': 'Hide menu'};
+	const defaultStrings = {'showmenu': 'Show menu', 'hidemenu': 'Hide menu'};
 	
 	if ( undefined === localStrings ) {
 		localStrings = defaultStrings; 
@@ -22,8 +25,15 @@ function menuHamburger( id, localStrings ) {
 	}
 	
 	// Move the contents to a div called 'content'.
-	if (null === document.querySelector('#' + id + ' > .content')) {
-		var contentContainer = document.createElement('div');
+	const children = menuContainer.children;
+	let hasContentWrapper = false;
+	for ( var i = 0; i < children.length; i++ ) {
+		if ( children.item( i ).classList.contains( 'content' ) ) {
+			hasContentWrapper = true;
+		}
+	}
+	if ( ! hasContentWrapper ) {
+		const contentContainer = document.createElement('div');
 		contentContainer.setAttribute('class', 'content');
 		/* There is a nicer way using the ... operator to do this, but 
 			  not all browsers currently support the operator. */
@@ -34,9 +44,9 @@ function menuHamburger( id, localStrings ) {
 	}
 	
 	// Build the icon.
-	var toggleIcon = document.createElement('div');
+	const toggleIcon = document.createElement('button');
 	toggleIcon.setAttribute( 'class', 'icon' );
-	toggleIcon.innerHTML = '<span class="icon-show"><span class="label">' + localStrings['showmenu'] + '</span></span><span class="icon-hide"><span class="label">' + localStrings['hidemenu'] + '</span></span>';
+	toggleIcon.innerHTML = '<span class="icon-show"><img src="icon-open.svg" alt="' + localStrings['showmenu'] + '" width="16" height="16"></span><span class="icon-hide"><img src="icon-close.svg" alt="' + localStrings['hidemenu'] + '" width="16" height="16"></span>';
 	menuContainer.insertBefore( toggleIcon, menuContainer.childNodes[0] );
 	
 	// Capture and process clicks or taps.

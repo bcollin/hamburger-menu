@@ -38,18 +38,12 @@
 	float: right;
 	width: 3em;
 	height: 3em;
-	background: url('sprite-hamburger-icons.svg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 0% 130%; 
+	border: 0px; 
 }
 
-.menu-hamburger.menu-hamburger-hidden > .icon {
-	background-position: 0% -32%; 
-}
-
-.menu-hamburger > .icon .label {
-	display: none;
+.menu-hamburger > .icon img {
+	width: 100%;
+	height: auto;
 }
 
 @media (min-width: 800px) {
@@ -111,7 +105,7 @@ body {
 
 /* Demo of a hamburger menu that is always on, regardless of the screen width. */
 #one-burger-is-no-burger.menu-hamburger-hidden {
-	width: 3em;
+	display: inline-block;
 }
 
 #one-burger-is-no-burger,
